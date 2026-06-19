@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StreamMix</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+height:70px;
+background:#111827;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 20px;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#00d4ff;
+}
+
+.search{
+width:40%;
+padding:10px;
+border:none;
+border-radius:20px;
+}
+
+.container{
+display:flex;
+}
+
+.sidebar{
+width:220px;
+height:calc(100vh - 70px);
+background:#1e293b;
+padding:20px;
+}
+
+.sidebar div{
+padding:15px;
+cursor:pointer;
+}
+
+.content{
+flex:1;
+padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+border-radius:15px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+.thumbnail{
+height:150px;
+background:linear-gradient(45deg,#00d4ff,#9333ea);
+}
+
+.info{
+padding:15px;
+}
+
+.player{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+height:80px;
+background:#111827;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">StreamMix</div>
+
+<input
+class="search"
+placeholder="Search music or videos..."
+>
+
+<div>👤 Profile</div>
+</header>
+
+<div class="container">
+
+<div class="sidebar">
+<div>🏠 Home</div>
+<div>🎵 Music</div>
+<div>🎬 Videos</div>
+<div>🔥 Trending</div>
+<div>❤️ Favorites</div>
+<div>📃 Playlists</div>
+</div>
+
+<div class="content">
+
+<h2>Trending</h2>
+<br>
+
+<div class="grid">
+
+<div class="card">
+<div class="thumbnail"></div>
+<div class="info">
+<h3>Music Video</h3>
+<p>Artist Name</p>
+</div>
+</div>
+
+<div class="card">
+<div class="thumbnail"></div>
+<div class="info">
+<h3>Podcast</h3>
+<p>Creator</p>
+</div>
+</div>
+
+<div class="card">
+<div class="thumbnail"></div>
+<div class="info">
+<h3>Gaming Video</h3>
+<p>Channel</p>
+</div>
+</div>
+
+<div class="card">
+<div class="thumbnail"></div>
+<div class="info">
+<h3>New Song</h3>
+<p>Singer</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="player">
+<button>⏮</button>
+<button onclick="play()">▶</button>
+<button>⏭</button>
+
+<audio id="audio" controls>
+<source src="">
+</audio>
+</div>
+
+<script>
+function play(){
+alert("Connect your audio/video files here.");
+}
+</script>
+
+</body>
+</html>
